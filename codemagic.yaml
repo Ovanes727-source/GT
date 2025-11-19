@@ -4,8 +4,7 @@ workflows:
     scripts:
       - name: Build Release APK
         script: |
-          cd RealTimeGameTranslator_beautiful
-          chmod +x ./gradlew    # ← ЭТА КОМАНДА ДАЕТ ПРАВА НА ВЫПОЛНЕНИЕ
+          chmod +x ./gradlew
           ./gradlew clean assembleRelease --no-daemon
     artifacts:
-      - RealTimeGameTranslator_beautiful/app/build/outputs/**/*.apk
+      - app/build/outputs/**/*.apk
